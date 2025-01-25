@@ -1,7 +1,5 @@
-def cube(x):
-    return x*x*x
-
-l  = [2,4,6,7]
-
-newl = list(map(cube, l))
-print(newl)
+l = [2,1,3,5,7,9,65]
+def filter_funcation(a):
+    return a>4
+newlin = list(filter(filter_funcation, l))
+print(newlin)
