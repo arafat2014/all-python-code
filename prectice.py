@@ -1,7 +1,7 @@
 def greet(fx):
-  def mfx():
+  def mfx(*args, **kwargs):
     print("Good Morning")
-    fx()
+    fx(*args, **kwargs)
     print("Thanks for using this fincation")
   return mfx
 @greet
@@ -11,6 +11,7 @@ def add(a, b):
   print(a+b)
   
 hello()
-add(2,3)
+greet(add(1, 2))
+
 
        
