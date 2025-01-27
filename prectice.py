@@ -1,13 +1,13 @@
-def greet(fx):
+def asset(fx):
   def mfx(*args, **kwargs):
     print("Good Morning")
     fx(*args, **kwargs)
     print("Thanks for using this fincation")
   return mfx
-@greet
+@asset
 def hello():
     print("Hello world")
-@greet
+@asset
 def add(a, b):
   print(a+b)
   
