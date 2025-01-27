@@ -1,22 +1,15 @@
-class person:
-  name = "Arafat"
-  occupation = "Software Engineer"
-  age = 25
-  city = "Dhaka"
+class person: 
+  def __init__(self, n, o):
+    self.name = n
+    self.occ = o
   def info(self):
-    print(f"{self.name} is a {self.occupation} his age is {self.age} he lives is {self.city}")
+    print(f"{self.name} is a {self.occ}")
 
-a = person()
-b = person()
-a.name = "Anamul"
-a.occupation = "Web developer"
-a.age = 26
-a.city = "Tangail"
-
-b.name = "Yasin"
-b.occupation = "App developer"
-b.age = 24
-b.city = "Chadpur"
-
+a = person("Arafat", "Engineer")
+b = person("Shifa", "Also Engineer")
+c = person("Anamul", "Web developer")
+d = person("Yasin", "App developer")
 a.info()
 b.info()
+c.info()
+d.info()
