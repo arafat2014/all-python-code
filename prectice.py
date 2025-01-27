@@ -7,6 +7,7 @@ def greet(fx):
 @greet
 def hello():
     print("Hello world")
+@greet
 def add(a, b):
   print(a+b)
   
