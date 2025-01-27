@@ -1,15 +1,13 @@
-class person: 
-  def __init__(self, n, o):
-    self.name = n
-    self.occ = o
-  def info(self):
-    print(f"{self.name} is a {self.occ}")
+import logging
 
-a = person("Arafat", "Engineer")
-b = person("Shifa", "Also Engineer")
-c = person("Anamul", "Web developer")
-d = person("Yasin", "App developer")
-a.info()
-b.info()
-c.info()
-d.info()
+def log_funcation_call(func):
+  def decorated(*args, **kwargs):
+    logging.info(f"calling {func.__name__} with arge={args}, kwargs={kwargs}")
+    result = func(*args, **kwargs)
+    logging.info(f"{func.__name__} returned {result}")
+    return result
+  return decorated
+@log_funcation_call
+def my_funcation(a, b):
+  return a + b
+    
