@@ -1,20 +1,22 @@
-class MyClass:
-    def __init__(self, value):
-        self._value = value
-        
-    def show(self):
-      print(f"value is {self._value}")  
-       
-    @property
-    def ten_value(self):
-        return self._value
+class Employ:
+    def __init__(self, name, ID):
+        self.name = name
+        self.ID = ID
     
-    @ten_value.setter
-    def ten_value(self, new_value):
-        self._value = new_value/10
+    def ShowDetails(self):
+        print(f"The name of employ {self.name} and ID is {self.ID} ")
+        
+class progmeer(Employ):
+    def __init__(self, language):
+        self.language = language
+        
+    def ShowLanguage(self):
+        print(f"The employ work om {self.language} language")
         
     
-obj = MyClass(10)
-obj.ten_value = 67
-print(obj.ten_value)
-obj.show()
+e = Employ("Sharif Arafat", 25)
+e.ShowDetails()
+b = progmeer("python")
+b.ShowLanguage()
+
+   
