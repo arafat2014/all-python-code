@@ -16,6 +16,10 @@ comp = random.randint(0, 2)
 user = int(input("0 for snake, 1 for water, 2 for gun"))
 
 score = check(comp, user)
+
+print("You:", user)
+print("You:", comp)
+2
 if (score == 0):
     print("It's a drow")
     
