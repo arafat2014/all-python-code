@@ -1,30 +1,25 @@
-import random
-
-def check(comp, user):
-    if comp == user:
-        return 0
-    if(comp == 0 and user ==1 ):
-        return -1
-    if(comp == 1 and user ==2 ):
-        return -1
-    if(comp == 2 and user ==0 ):
-        return -1
+class Libary:
+    def __init__(self):
+        self.noBooks = 0
+        self.books = []
+        
+    def addBook(self, book):
+        self.books.append(book)
+        self.noBooks = len(self.books)
     
-    return 1
+    def showInfo(self):
+        print(f"The Libary has {self.noBooks} books. The Books are")
+        for book in self.books:
+            print(book)
+        
+l1 = Libary()
+l1.addBook("Harry Potter")
+l1.addBook("Harry Potter 2")
+l1.addBook("Harry Potter 3")
+l1.showInfo()
 
-comp = random.randint(0, 2)
-user = int(input("0 for snake, 1 for water, 2 for gun"))
 
-score = check(comp, user)
-
-print("You:", user)
-print("Computer:", comp)
-2
-if (score == 0):
-    print("It's a drow")
-    
-elif(score == -1):
-    print("you lose ")
-    
-else:
-    print("you won")
+        
+        
+         
+        
