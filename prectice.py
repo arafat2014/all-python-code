@@ -1,21 +1,18 @@
-class Math:
-    def __init__(self, num):
-        self.num = num
+class Employee:
+    companyName ="Apple"
+    degignation = "Software Engineer"
+    def __init__(self, name):
+        self.name = name
+        self.raise_amount = 0.02
         
-    def addtonum(self, n):
-        self.num = self.num+n
-        
-    @staticmethod
-    def add(a, b):
-        return a +b
+    def showDetails(self):
+        print(f"The Employ name is {self.name} and raise amount in {self.companyName} is {self.raise_amount} and job positiopn is {self.degignation}")
     
-a = Math(5)
-print(a.num)
-a.addtonum(6)
-print(a.num)
-a.addtonum(7)
-print(a.num)
-    
+e1 = Employee("Arafat")
+e1.raise_amount = 2.3
+e1.showDetails()
+e2 = Employee("Shifa")
+e2.showDetails()
     
 
 
