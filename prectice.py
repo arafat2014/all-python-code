@@ -11,7 +11,10 @@ class Math:
     
 a = Math(5)
 print(a.num)
-    
+a.addtonum(6)
+print(a.num)
+a.addtonum(7)
+print(a.num)
     
     
 
